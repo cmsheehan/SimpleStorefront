@@ -1,20 +1,27 @@
 {% extends 'NoIncSimpleStorefrontBundle:Default:base.html.twig' %}
 
-{% block body %} 
+{% block body %}
+	<header>
+  		<h1>simple storefront</h1>
+    </header>
 	<div class="item pricing" id="pricing_table1">
 		
-		<div class="container">
-		
-			<div class="row">
+		<div class="container-fluid">
 			
-				{% for recipe in recipes %}
-				    {% include 'NoIncSimpleStorefrontBundle:Default:product-buy.html.twig' with {'recipe': recipe} %}
-				{% endfor %}
+			<div class="contentWrapper">
 			
-			</div><!-- /.row -->
-		
-		</div><!-- /.container -->
-	
+				<div class="row">
+				
+					{% for recipe in recipes %}
+					    {% include 'NoIncSimpleStorefrontBundle:Default:product-buy.html.twig' with {'recipe': recipe} %}
+					{% endfor %}
+				
+				</div><!-- /.row -->
+			
+			</div>
+	   
+        </div><!-- /.container -->
+
 	</div><!-- /.item -->
 	
 {% endblock %}

@@ -137,7 +137,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    	".git/",
    	".vagrant/",
    	"var/cache/",
-   	"vendor/"
+   	"vendor/",
+    "app/config/"
   ]
 
   # Copy over ssh keys to vagrant
